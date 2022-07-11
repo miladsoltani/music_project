@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>music_player_project</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 </head>
 <body>
-    <audio autoplay controls src="/musics/1.mp3"></audio>
-    <img src="/images/1.jpg" alt="cover">
-    <button>play</button>
-    <button>pause</button>
-    <button>.5x</button>
-    <button>1x</button>
-    <button>2x</button>
-    <button>next</button>
-    <button>previous</button>
-    <button>+5</button>
-    <button>-5</button>
-    <p></p>
-    <p></p>
+    <div class="container">
+        <audio autoplay src="/musics/1.mp3"></audio>
+        <img src="/images/1.jpg" alt="cover">
+        <div class="one">
+            <button class="previous"><i class="fa fa-backward" aria-hidden="true"></i></button>
+            <button class="pause"><i class="fa fa-pause-circle" style="font-size:5em" aria-hidden="true"></i></button>
+            <button class="play"><i class="fa fa-play-circle" style="font-size:5em" aria-hidden="true"></i></button>
+            <button class="next"><i class="fa fa-forward" aria-hidden="true"></i></button>
+        </div>
+        <div class="two">
+            <button class="nim_x">.5x</button>
+            <button class="one_x">1x</button>
+            <button class="two_x">2x</button>
+        </div>
+        <div class="three">
+            <button class="minus_5">-5</button>
+            <button class="plus_5">+5</button>
+        </div>
+        <p></p>
+        <p></p>
+    </div>
     <script src="/js/script.js"></script>
 </body>
 </html>

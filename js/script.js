@@ -1,14 +1,14 @@
 const img = document.querySelector('img')
 const audio = document.querySelector('audio')
-const play = document.querySelectorAll('button')[0]
-const pause = document.querySelectorAll('button')[1]
-const nim_x = document.querySelectorAll('button')[2]
-const one_x = document.querySelectorAll('button')[3]
-const two_x = document.querySelectorAll('button')[4]
-const next = document.querySelectorAll('button')[5]
-const previous = document.querySelectorAll('button')[6]
-const plus_5 = document.querySelectorAll('button')[7]
-const minus_5 = document.querySelectorAll('button')[8]
+const play = document.querySelector('.play')
+const pause = document.querySelector('.pause')
+const nim_x = document.querySelector('.nim_x')
+const one_x = document.querySelector('.one_x')
+const two_x = document.querySelector('.two_x')
+const next = document.querySelector('.next')
+const previous = document.querySelector('.previous')
+const plus_5 = document.querySelector('.plus_5')
+const minus_5 = document.querySelector('.minus_5')
 const totalTime = document.querySelectorAll('p')[0]
 const currentTime = document.querySelectorAll('p')[1]
 
@@ -38,10 +38,14 @@ previous.addEventListener('click',()=>{
 
 play.addEventListener('click',()=>{
     audio.play()
+    play.style.display = 'none'
+    pause.style.display = 'block'
 })
 
 pause.addEventListener('click',()=>{
     audio.pause()
+    pause.style.display = 'none'
+    play.style.display = 'block'
 })
 
 plus_5.addEventListener('click',()=>{
@@ -64,9 +68,11 @@ two_x.addEventListener('click',()=>{
     audio.playbackRate = 2
 })
 
-totalTime.innerHTML =Math.floor(Number(audio.duration))
+totalTime.innerHTML =Math.floor(audio.duration)
 
 setInterval(() => {
     currentTime.innerHTML++
     currentTime.innerHTML = Math.floor(audio.currentTime)
 }, 1000);
+
+
