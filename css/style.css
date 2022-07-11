@@ -81,3 +81,14 @@ body {
     padding: 10px;
     margin: 5px;
 }
+
+.four {
+    text-align: center;
+}
+
+.plus_vol ,
+.minus_vol {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+}
